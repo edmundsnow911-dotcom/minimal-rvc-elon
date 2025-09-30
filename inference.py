@@ -3,13 +3,13 @@
 # - Attempts to load models if available; if not, falls back to copying input -> output.
 # - Designed to be safe to import in Colab / wrapper environments.
 
-MODULE_DIR = os.path.dirname(__file__)  # inference.py가 있는 폴더
-
 import os
 import glob
 import shutil
 import logging
 import time
+
+MODULE_DIR = os.path.dirname(__file__)  # inference.py가 있는 폴더
 
 logger = logging.getLogger("inference")
 logger.setLevel(logging.INFO)
