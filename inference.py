@@ -20,12 +20,16 @@ if not logger.handlers:
 
 # === Config: expected model locations (adjust if you use different names) ===
 HUBERT_CANDIDATES = [
+    os.path.join(MODULE_DIR, "models", "hubert", "hubert_base.pt"),
+    os.path.join(MODULE_DIR, "models", "hubert", "hubert_soft.pt"),
     os.path.join("models", "hubert", "hubert_base.pt"),
     os.path.join("models", "hubert", "hubert_soft.pt"),
     os.path.join("hubert", "hubert_base.pt"),
     os.path.join("hubert", "hubert_soft.pt"),
 ]
-ELON_DIR = os.path.join("models", "elon")    # look for .pth/.pt/.zip inside
+
+ELON_DIR = os.path.join(MODULE_DIR, "models", "elon")
+   # look for .pth/.pt/.zip inside
 
 # module-level cache for loaded models (so repeated calls are fast)
 _models = {
